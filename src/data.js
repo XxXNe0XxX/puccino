@@ -5,6 +5,7 @@ export const MENU = [
     name: "Espresso",
     desc: "Single shot, dark crema, served in a warm porcelain demitasse.",
     price: 3.25,
+    image: "https://picsum.photos/seed/esp/800/600",
   },
   {
     id: "dop",
@@ -12,6 +13,7 @@ export const MENU = [
     name: "Doppio",
     desc: "Double espresso for the unhurried morning.",
     price: 4.0,
+    image: "https://picsum.photos/seed/dop/800/600",
   },
   {
     id: "mac",
@@ -19,6 +21,7 @@ export const MENU = [
     name: "Macchiato",
     desc: "Espresso 'marked' with a small dollop of steamed milk foam.",
     price: 3.75,
+    image: "https://picsum.photos/seed/mac/800/600",
   },
   {
     id: "cor",
@@ -26,6 +29,7 @@ export const MENU = [
     name: "Caffè Corretto",
     desc: "Espresso 'corrected' with a splash of grappa or sambuca.",
     price: 5.5,
+    image: "https://picsum.photos/seed/cor/800/600",
   },
   {
     id: "cap",
@@ -33,6 +37,7 @@ export const MENU = [
     name: "Cappuccino",
     desc: "Equal parts espresso, steamed milk, and velvet foam. Mornings only.",
     price: 4.75,
+    image: "https://picsum.photos/seed/cap/800/600",
   },
   {
     id: "lat",
@@ -40,6 +45,7 @@ export const MENU = [
     name: "Caffè Latte",
     desc: "Long pull of espresso under silky steamed milk.",
     price: 5.25,
+    image: "https://picsum.photos/seed/lat/800/600",
   },
   {
     id: "fla",
@@ -47,6 +53,7 @@ export const MENU = [
     name: "Flat White",
     desc: "Two ristretto shots, microfoam poured close.",
     price: 5.0,
+    image: "https://picsum.photos/seed/fla/800/600",
   },
   {
     id: "moc",
@@ -54,6 +61,7 @@ export const MENU = [
     name: "Mocha",
     desc: "Espresso, steamed milk, and house-made dark chocolate.",
     price: 5.75,
+    image: "https://picsum.photos/seed/moc/800/600",
   },
   {
     id: "g-co",
@@ -62,6 +70,7 @@ export const MENU = [
     desc: "Our signature. Slow-frozen espresso ice with a crown of unsweetened panna. The reason you walked in.",
     price: 7.5,
     hero: true,
+    image: "https://picsum.photos/seed/g-co/800/600",
   },
   {
     id: "g-li",
@@ -69,6 +78,7 @@ export const MENU = [
     name: "Granita di Limone",
     desc: "Sicilian lemons, pure and bracing.",
     price: 6.5,
+    image: "https://picsum.photos/seed/g-li/800/600",
   },
   {
     id: "g-al",
@@ -76,6 +86,7 @@ export const MENU = [
     name: "Granita di Mandorla",
     desc: "Almond milk and Marcona, served with brioche al tuppo.",
     price: 7.0,
+    image: "https://picsum.photos/seed/g-al/800/600",
   },
   {
     id: "g-fr",
@@ -83,6 +94,7 @@ export const MENU = [
     name: "Granita di Fragola",
     desc: "Sun-ripened strawberries from the Northshore market.",
     price: 6.75,
+    image: "https://picsum.photos/seed/g-fr/800/600",
   },
   {
     id: "p-co",
@@ -90,6 +102,7 @@ export const MENU = [
     name: "Cornetto",
     desc: "Italian croissant — flakier, less buttery than its French cousin. Plain or apricot.",
     price: 4.5,
+    image: "https://picsum.photos/seed/p-co/800/600",
   },
   {
     id: "p-sf",
@@ -97,6 +110,7 @@ export const MENU = [
     name: "Sfogliatella",
     desc: "Layered shell pastry filled with sweetened ricotta and orange zest.",
     price: 5.25,
+    image: "https://picsum.photos/seed/p-sf/800/600",
   },
   {
     id: "p-ca",
@@ -104,6 +118,7 @@ export const MENU = [
     name: "Cannolo Siciliano",
     desc: "Filled to order. Ricotta, candied orange, pistachio.",
     price: 5.75,
+    image: "https://picsum.photos/seed/p-ca/800/600",
   },
   {
     id: "p-ti",
@@ -111,6 +126,7 @@ export const MENU = [
     name: "Tiramisù al Bicchiere",
     desc: "House classic, served in a glass. Mascarpone, espresso-soaked savoiardi, cocoa.",
     price: 6.5,
+    image: "https://picsum.photos/seed/p-ti/800/600",
   },
 ];
 

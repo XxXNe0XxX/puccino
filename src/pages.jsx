@@ -34,12 +34,10 @@ export function HomePage({ goto, addToCart }) {
               </button>
             </div>
           </div>
-          <Placeholder
-            label="Hero · Barista pulling shot"
-            ratio="4/5"
-            tone="rust"
-            mark
-            style={{ borderRadius: 10 }}
+          <img
+            src="https://picsum.photos/seed/hero-barista/800/1000"
+            alt="Barista pulling espresso shot"
+            style={{ width: "100%", aspectRatio: "4/5", objectFit: "cover", borderRadius: 10, display: "block" }}
           />
         </div>
         <div className="hero-rays" aria-hidden="true">
@@ -49,12 +47,10 @@ export function HomePage({ goto, addToCart }) {
 
       <section className="granita" aria-labelledby="granita-h">
         <div className="container granita-grid">
-          <Placeholder
-            label="Granita di Caffè · the original"
-            ratio="1/1"
-            tone="espresso"
-            mark
-            style={{ borderRadius: 10 }}
+          <img
+            src="https://picsum.photos/seed/granita-feature/800/800"
+            alt="Granita di Caffè"
+            style={{ width: "100%", aspectRatio: "1/1", objectFit: "cover", borderRadius: 10, display: "block" }}
           />
           <div>
             <span className="eyebrow">
@@ -111,10 +107,10 @@ export function HomePage({ goto, addToCart }) {
               ["esp", "cap", "g-co", "lat", "p-co", "p-ti"].includes(m.id),
             ).map((item) => (
               <article key={item.id} className="menu-card">
-                <Placeholder
-                  label={item.name}
-                  ratio="4/3"
-                  tone={item.id === "g-co" ? "rust" : null}
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block" }}
                 />
                 <div className="menu-card-body">
                   <div className="menu-card-row">
@@ -216,16 +212,10 @@ export function MenuPage({ addToCart, cart }) {
           <div className="menu-grid">
             {items.map((item) => (
               <article key={item.id} className="menu-card">
-                <Placeholder
-                  label={item.name}
-                  ratio="4/3"
-                  tone={
-                    item.cat === "Granita"
-                      ? "rust"
-                      : item.hero
-                        ? "espresso"
-                        : null
-                  }
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block" }}
                 />
                 <div className="menu-card-body">
                   <div className="menu-card-row">
@@ -273,12 +263,10 @@ export function AboutPage({ goto }) {
       </section>
 
       <section className="container" style={{ paddingBottom: 24 }}>
-        <Placeholder
-          label="Archival · Giuseppe Puccino, 1962"
-          ratio="21/9"
-          tone="espresso"
-          mark
-          style={{ borderRadius: 10 }}
+        <img
+          src="https://picsum.photos/seed/archival-cafe/1600/686"
+          alt="Archival photo: Giuseppe Puccino, 1962"
+          style={{ width: "100%", aspectRatio: "21/9", objectFit: "cover", borderRadius: 10, display: "block" }}
         />
       </section>
 
@@ -502,10 +490,10 @@ export function CartPage({ cart, setCart, goto, startOrder }) {
             <div>
               {cart.map((line) => (
                 <div className="cart-line" key={line.id}>
-                  <Placeholder
-                    label={line.name.split(" ")[0]}
-                    ratio="1/1"
-                    tone={line.cat === "Granita" ? "rust" : null}
+                  <img
+                    src={line.image}
+                    alt={line.name}
+                    style={{ width: "100%", aspectRatio: "1/1", objectFit: "cover", display: "block", borderRadius: "var(--radius-sm)" }}
                   />
                   <div>
                     <h4>{line.name}</h4>

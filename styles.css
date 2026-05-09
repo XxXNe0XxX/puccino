@@ -783,7 +783,8 @@ a {
   border-bottom: 1px solid var(--line);
   align-items: center;
 }
-.cart-line .ph {
+.cart-line .ph,
+.cart-line img {
   aspect-ratio: 1;
   border-radius: var(--radius-sm);
 }
@@ -1103,7 +1104,8 @@ a {
     gap: 16px;
     padding: 16px 0;
   }
-  .cart-line .ph {
+  .cart-line .ph,
+  .cart-line img {
     width: 100%;
   }
   .cart-summary {
