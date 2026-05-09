@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Star, Rays, Placeholder } from "./shared.jsx";
+import { Star, Rays } from "./shared.jsx";
 import { MENU, CATEGORIES, LOCATIONS } from "./data.js";
 
 export function HomePage({ goto, addToCart }) {
@@ -370,10 +370,10 @@ export function LocationsPage() {
             </p>
           </div>
 
-          <Placeholder
-            label="Map · New Orleans · 4 pins"
-            ratio="21/9"
-            style={{ borderRadius: 10, marginBottom: 48 }}
+          <img
+            src="https://picsum.photos/seed/nola-map/1600/686"
+            alt="New Orleans café locations map"
+            style={{ width: "100%", aspectRatio: "21/9", objectFit: "cover", borderRadius: 10, marginBottom: 48, display: "block" }}
           />
 
           <div className="loc-grid">
