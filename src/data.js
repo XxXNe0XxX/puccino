@@ -1,3 +1,5 @@
+import coffee from "./assets/img/coffee.webp";
+import pastries from "./assets/img/pastries.webp";
 export const MENU = [
   {
     id: "esp",
@@ -5,7 +7,7 @@ export const MENU = [
     name: "Espresso",
     desc: "Single shot, dark crema, served in a warm porcelain demitasse.",
     price: 3.25,
-    image: "https://picsum.photos/seed/esp/800/600",
+    image: coffee,
   },
   {
     id: "dop",
@@ -13,7 +15,7 @@ export const MENU = [
     name: "Doppio",
     desc: "Double espresso for the unhurried morning.",
     price: 4.0,
-    image: "https://picsum.photos/seed/dop/800/600",
+    image: coffee,
   },
   {
     id: "mac",
@@ -21,7 +23,7 @@ export const MENU = [
     name: "Macchiato",
     desc: "Espresso 'marked' with a small dollop of steamed milk foam.",
     price: 3.75,
-    image: "https://picsum.photos/seed/mac/800/600",
+    image: coffee,
   },
   {
     id: "cor",
@@ -29,7 +31,7 @@ export const MENU = [
     name: "Caffè Corretto",
     desc: "Espresso 'corrected' with a splash of grappa or sambuca.",
     price: 5.5,
-    image: "https://picsum.photos/seed/cor/800/600",
+    image: coffee,
   },
   {
     id: "cap",
@@ -37,7 +39,7 @@ export const MENU = [
     name: "Cappuccino",
     desc: "Equal parts espresso, steamed milk, and velvet foam. Mornings only.",
     price: 4.75,
-    image: "https://picsum.photos/seed/cap/800/600",
+    image: coffee,
   },
   {
     id: "lat",
@@ -45,7 +47,7 @@ export const MENU = [
     name: "Caffè Latte",
     desc: "Long pull of espresso under silky steamed milk.",
     price: 5.25,
-    image: "https://picsum.photos/seed/lat/800/600",
+    image: coffee,
   },
   {
     id: "fla",
@@ -53,7 +55,7 @@ export const MENU = [
     name: "Flat White",
     desc: "Two ristretto shots, microfoam poured close.",
     price: 5.0,
-    image: "https://picsum.photos/seed/fla/800/600",
+    image: coffee,
   },
   {
     id: "moc",
@@ -61,7 +63,7 @@ export const MENU = [
     name: "Mocha",
     desc: "Espresso, steamed milk, and house-made dark chocolate.",
     price: 5.75,
-    image: "https://picsum.photos/seed/moc/800/600",
+    image: coffee,
   },
   {
     id: "g-co",
@@ -70,7 +72,7 @@ export const MENU = [
     desc: "Our signature. Slow-frozen espresso ice with a crown of unsweetened panna. The reason you walked in.",
     price: 7.5,
     hero: true,
-    image: "https://picsum.photos/seed/g-co/800/600",
+    image: coffee,
   },
   {
     id: "g-li",
@@ -78,7 +80,7 @@ export const MENU = [
     name: "Granita di Limone",
     desc: "Sicilian lemons, pure and bracing.",
     price: 6.5,
-    image: "https://picsum.photos/seed/g-li/800/600",
+    image: coffee,
   },
   {
     id: "g-al",
@@ -86,7 +88,7 @@ export const MENU = [
     name: "Granita di Mandorla",
     desc: "Almond milk and Marcona, served with brioche al tuppo.",
     price: 7.0,
-    image: "https://picsum.photos/seed/g-al/800/600",
+    image: coffee,
   },
   {
     id: "g-fr",
@@ -94,7 +96,7 @@ export const MENU = [
     name: "Granita di Fragola",
     desc: "Sun-ripened strawberries from the Northshore market.",
     price: 6.75,
-    image: "https://picsum.photos/seed/g-fr/800/600",
+    image: coffee,
   },
   {
     id: "p-co",
@@ -102,7 +104,7 @@ export const MENU = [
     name: "Cornetto",
     desc: "Italian croissant — flakier, less buttery than its French cousin. Plain or apricot.",
     price: 4.5,
-    image: "https://picsum.photos/seed/p-co/800/600",
+    image: pastries,
   },
   {
     id: "p-sf",
@@ -110,7 +112,7 @@ export const MENU = [
     name: "Sfogliatella",
     desc: "Layered shell pastry filled with sweetened ricotta and orange zest.",
     price: 5.25,
-    image: "https://picsum.photos/seed/p-sf/800/600",
+    image: pastries,
   },
   {
     id: "p-ca",
@@ -118,7 +120,7 @@ export const MENU = [
     name: "Cannolo Siciliano",
     desc: "Filled to order. Ricotta, candied orange, pistachio.",
     price: 5.75,
-    image: "https://picsum.photos/seed/p-ca/800/600",
+    image: pastries,
   },
   {
     id: "p-ti",
@@ -126,7 +128,7 @@ export const MENU = [
     name: "Tiramisù al Bicchiere",
     desc: "House classic, served in a glass. Mascarpone, espresso-soaked savoiardi, cocoa.",
     price: 6.5,
-    image: "https://picsum.photos/seed/p-ti/800/600",
+    image: pastries,
   },
 ];
 
@@ -140,35 +142,48 @@ export const CATEGORIES = [
 
 export const LOCATIONS = [
   {
-    name: "French Quarter",
-    addr: "812 Royal Street",
-    nbhd: "New Orleans, LA 70116",
-    hours: "Mon–Sun · 6:30a – 9:00p",
-    phone: "(504) 555-0142",
+    name: "Lakeside Mall",
+    addr: "3301 Veterans Memorial Blvd,",
+    nbhd: " Metairie, LA 70002",
+    hours: "Mon–Sun · 6:00am – 9:00pm",
+    phone: "(504) 835-3151",
     pill: "Flagship",
+    link: "https://424vets.orderpuccinos.com/"
   },
   {
-    name: "Magazine Street",
-    addr: "3401 Magazine Street",
-    nbhd: "New Orleans, LA 70115",
-    hours: "Mon–Sat · 7:00a – 8:00p",
-    phone: "(504) 555-0167",
-    pill: "Garden District",
-  },
-  {
-    name: "Marigny",
-    addr: "2500 Royal Street",
-    nbhd: "New Orleans, LA 70117",
-    hours: "Mon–Sun · 7:00a – 10:00p",
-    phone: "(504) 555-0188",
-    pill: "Live Music Fri",
-  },
-  {
-    name: "Mid-City",
-    addr: "4221 Canal Street",
-    nbhd: "New Orleans, LA 70119",
-    hours: "Mon–Sun · 6:00a – 7:00p",
-    phone: "(504) 555-0199",
+    name: "West Esplanade",
+    addr: "4644 W Esplanade Ave",
+    nbhd: "Metairie, LA 70004",
+    hours: "Mon–Sat · 6:00am – 9:00pm",
+    phone: "(504) 309-2646",
     pill: "Drive-thru",
+    link: ""
+  },
+  {
+    name: "Veterans Blvd",
+    addr: "424 Veterans Memorial Blvd",
+    nbhd: "Metairie, LA 70002",
+    hours: "Mon–Sun · 6:00am – 9:00pm",
+    phone: "(504) 835-3151",
+    pill: "Drive-thru",
+    link: "https://424vets.orderpuccinos.com/",
+  },
+  {
+    name: "Metairie Road",
+    addr: "1801 Dickory Ave",
+    nbhd: "Harahan, LA 70123",
+    hours: "Mon–Sun · 6:00am – 9:00pm",
+    phone: " (504) 304-0210",
+    pill: "Drive-thru",
+    link: "https://metrd.orderpuccinos.com/"
+  },
+  {
+    name: "Dickory",
+    addr: "1801 Dickory Ave",
+    nbhd: "Metairie, LA 70001",
+    hours: "Mon–Sun · 6:00am – 9:00pm",
+    phone: "(504) 373-5450",
+    pill: "Drive-thru",
+    link: "https://dickoryave.orderpuccinos.com/"
   },
 ];
