@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Star, Rays } from "./shared.jsx";
 import { MENU, CATEGORIES, LOCATIONS } from "./data.js";
+import coffee from "./assets/img/coffee.webp";
 
 export function HomePage({ goto, addToCart }) {
   return (
@@ -35,7 +36,7 @@ export function HomePage({ goto, addToCart }) {
             </div>
           </div>
           <img
-            src="https://picsum.photos/seed/hero-barista/800/1000"
+            src={coffee}
             alt="Barista pulling espresso shot"
             style={{ width: "100%", aspectRatio: "4/5", objectFit: "cover", borderRadius: 10, display: "block" }}
           />
@@ -48,7 +49,7 @@ export function HomePage({ goto, addToCart }) {
       <section className="granita" aria-labelledby="granita-h">
         <div className="container granita-grid">
           <img
-            src="https://picsum.photos/seed/granita-feature/800/800"
+            src={coffee}
             alt="Granita di Caffè"
             style={{ width: "100%", aspectRatio: "1/1", objectFit: "cover", borderRadius: 10, display: "block" }}
           />
@@ -350,6 +351,25 @@ export function AboutPage({ goto }) {
   );
 }
 
+const ORDER_URL = "https://puccinos.example.com/order";
+
+function getDirectionsUrl(address) {
+  const ua = typeof navigator !== "undefined" ? navigator.userAgent : "";
+  const isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+  const isAndroid = /Android/.test(ua);
+  const encoded = encodeURIComponent(address);
+
+  if (isIOS) {
+    return `maps://?q=${encoded}`;
+  }
+
+  if (isAndroid) {
+    return `geo:0,0?q=${encoded}`;
+  }
+
+  return `https://www.google.com/maps/dir/?api=1&destination=${encoded}`;
+}
+
 export function LocationsPage() {
   return (
     <main id="main">
@@ -369,12 +389,7 @@ export function LocationsPage() {
               out, or pre-order ahead and skip the line.
             </p>
           </div>
-
-          <img
-            src="https://picsum.photos/seed/nola-map/1600/686"
-            alt="New Orleans café locations map"
-            style={{ width: "100%", aspectRatio: "21/9", objectFit: "cover", borderRadius: 10, marginBottom: 48, display: "block" }}
-          />
+          
 
           <div className="loc-grid">
             {LOCATIONS.map((loc) => (
@@ -413,21 +428,55 @@ export function LocationsPage() {
                 </div>
                 <div
                   className="loc-actions"
-                  style={{ display: "flex", gap: 8, marginTop: 16 }}
+                  style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 16 }}
                 >
-                  <button
+                  <a
                     className="btn btn-secondary"
+                    href={getDirectionsUrl(`${loc.addr}, ${loc.nbhd}`)}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={{ minHeight: 48, fontSize: 13, padding: "0 20px" }}
                   >
                     Directions
-                  </button>
-                  <button
-                    className="btn btn-primary"
-                    style={{ minHeight: 48, fontSize: 13, padding: "0 20px" }}
-                  >
-                    Pre-Order
-                  </button>
+                  </a>
+                  {loc.link ? (
+                    <a
+                      className="btn btn-primary"
+                      href={loc.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ minHeight: 48, fontSize: 13, padding: "0 20px" }}
+                    >
+                      Order
+                    </a>
+                  ) : (
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      disabled
+                      style={{
+                        minHeight: 48,
+                        fontSize: 13,
+                        padding: "0 20px",
+                        opacity: 0.5,
+                        cursor: "not-allowed",
+                      }}
+                    >
+                      Order
+                    </button>
+                  )}
                 </div>
+                {!loc.link && (
+                  <div
+                    style={{
+                      marginTop: 8,
+                      fontSize: 13,
+                      color: "var(--ink-2)",
+                    }}
+                  >
+                    Online ordering not available at this location.
+                  </div>
+                )}
               </article>
             ))}
           </div>
